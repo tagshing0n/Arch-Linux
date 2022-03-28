@@ -1,22 +1,22 @@
-commands
+######################################################################     Commands    ########################################################
 
-#show interfaces                                                           sudo ip addr 
+# Show interfaces                                                          sudo ip addr 
 
-#up interface. For this example wlp3s0 is the interface                    sudo ip link set wlp3s0 up
+# Up interface. For this example wlp3s0 is the interface                   sudo ip link set wlp3s0 up
 
-#Make file into /etc named wpa_supplicant.conf                             sudo nano /etc/wpa_supplicant.conf
+# Make file into /etc named wpa_supplicant.conf                            sudo nano /etc/wpa_supplicant.conf
 #into wpa_supplicant.conf file write the next code
 
-network={
-ssid="network name"
-proto=RSN
-key_mgmt=WPA-PSK
-pairwise=CCMP TKIP
-group=CCMP TKIP
-psk="password of network"
-}
+                                                                           network={
+                                                                           ssid="network name"
+                                                                           proto=RSN
+                                                                           key_mgmt=WPA-PSK
+                                                                           pairwise=CCMP TKIP
+                                                                           group=CCMP TKIP
+                                                                           psk="password of network"
+                                                                           }
 
 
-#Run wpa_supplicant                                                        sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant.conf
+# Run wpa_supplicant                                                       sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant.conf
 
-#Finally run dhcp for access to ips                                        sudo dhcpcd wlp3s0
+# Finally run dhcp for access to ips                                       sudo dhcpcd wlp3s0
