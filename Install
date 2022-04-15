@@ -29,12 +29,16 @@
 
 
 ###########################################################################
-##                              PARTITION TABLE                          ##
+##                           PARTITION TABLE                             ##
 ###########################################################################
 # We establish partitions with the command                                                          cfdisk
 # Partition table. Select DOS.
-# Create three partition. Select NEW for each one (515M Primary, 15G Primary, 4.5G Primary).
-# Select TYPE for assignment type of partition. For 4.5 Primary select Linux swap / Solaris.
+# Create three partition. Select NEW for each one (515M Primary, 15G 
+# Primary, 4.5G Primary).
+
+# Select TYPE for assignment type of partition. For 4.5 Primary select 
+# Linux swap / Solaris.
+
 # Then select WRITE and then select QUIT.
 # Check the correct write in table with the command                                                 lsblk
 
@@ -55,7 +59,7 @@
 
 
 ###########################################################################
-##                INSTALL ADITIONAL PACKAGES                             ##
+##                     INSTALL ADITIONAL PACKAGES                        ##
 ###########################################################################
 # Install packages                                                                                  pacstrap /mnt linux linux-firmware networkmanager grub wpa_supplicant base base-devel 
 # Create fstab fil                                                                                  genfstab -U /mnt
@@ -165,14 +169,30 @@
 ##                          GRAPHIC INTERFACE                            ##
 ########################################################################### 
 # Install packages xorg, xorg-server (enter for default install)                                  pacman -S xorg xorg-server
-#  
+# Install package gnome                                                                           pacman -S gnome 
+# Start gdm.service for begin the graphic interface then log in atomarch                          systemctl start gdm.service
+# Well done! We have graphic interface! We have eyes!
+# Press Ctrl-Alt-F5 and login as atomarch
+# Become root                                                                                     sudo su
+# Enable demon systemctl gdm.service (when reboot the graphical interface                                 
+# run again).                                                                                     systemctl enable gdm.service
+# Download Terminal kitty                                                                         pacman -S kitty
+# Reboot system 
 
 
 
-
-
-
-
+###########################################################################
+##                          INSTALL VMWARE-TOOLS                         ##
+###########################################################################
+# One once in home screen press Ctrl-Alt-F5 and login as atomarch
+# Become root                                                                                     sudo su
+# Install package gtkmm                                                                           pacman -S gtkmm
+# Install packages open-vm-tools                                                                  pacman -S open-vm-tools
+# Install xf86-video-vmware xf86-input-vmmouse                                                    pacman -S xf86-video-vmware xf86-input-vmmouse
+# Enable demon systemctl vmtoolsd                                                                 systemctl enable vmtoolsd
+# Next step, pray an our father!
+# Reboot system                                                                                   reboot now
+# 
 
 
 
