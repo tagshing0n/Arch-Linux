@@ -28,7 +28,6 @@
 
 
 
-
 ###########################################################################
 ##                              PARTITION TABLE                          ##
 ###########################################################################
@@ -46,16 +45,12 @@
 
 
 
-
 ###########################################################################
 ##                           MOUNT THE SYSTEM                            ##
 ###########################################################################
 # Mount /dev/sda2 on /mnt                                                                           mount /dev/sda2 /mnt
 # Make directory into /mnt named boot                                                               mkdir /mnt/boot
 # Mount /dev/sda1 on /mnt/boot                                                                      mount /dev/sda1 /mnt/boot
-
-
-
 
 
 
@@ -66,8 +61,6 @@
 # Create fstab fil                                                                                  genfstab -U /mnt
 # Send to /mnt/etc/fstab                                                                            genfstab -U /mnt/etc/fstab
 # Check with cat                                                                                    cat /mnt/etc/fstab
-
-
 
 
 
@@ -91,7 +84,6 @@
 # - Well done, ask for password!!
 
                                                                                                      
-
 
 ###########################################################################
 ##                        CONFIGURE THE REGIONS                          ##
@@ -117,6 +109,53 @@
 # 127.0.0.1 localhost
 # ::1       localhost                                                                                            
 # 127.0.0.1 coffreBreak.localhost coffeBreak                                                       nano /etc/hosts
+
+
+
+###########################################################################
+##                    IS TIME TO "I USE ARCH BY THE WAY"                 ##
+###########################################################################
+# Install neofetch                                                                                 pacman -S neofetch
+
+
+
+###########################################################################
+##                          NWTWORK CONECTION                            ##
+###########################################################################
+# We become root                                                                                 sudo su
+# Start service for internet conection                                                           systemctl start NetworkManager.service
+# Enable NetworkManager                                                                          systemctl enable NetworkManager
+# Do ping to google                                                                              
+# Well done! That´s it!                                                                          ping -c 1 google.com
+# Start wpa_applicant.service                                                                    systemctl start wpa_supplicant.service
+# Enable wpa_supplicant                                                                          systemctl enable wpa_supplicant.service
+
+
+
+###########################################################################
+##                            AUR REPOSITORY                             ##
+###########################################################################
+# Install git                                                                                   pacman -S git
+# We become atomarch user                                                                           
+# Create directorie /repos and then into it                                                     mkdir -p Desktop/atomarch/repos
+                                                                                                cd Desktop/atomarch/repos
+# Download repository                                                                           git clone https://aur.archlinux.org/paru-bin.git
+# Go into paru-bin                                                                              cd paru-bin
+# Use makepkg                                                                                   makepkg -si
+# Well done. ARU repository it´s done.
+
+
+
+###########################################################################
+##                      BLACKARCH REPOSITORY (OPTIONAL)                  ##
+###########################################################################
+
+
+
+
+
+
+
 
 
 
