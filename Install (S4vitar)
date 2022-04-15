@@ -253,7 +253,76 @@
 # Decompress icomoon.zip                                                                         unzip icomoon.zip
 # Move .ttf files into /usr/share/fonts                                                          mv icomoon/*.ttf .
 # Remove icomoon directory                                                                       rm -rf icomoon
+# Become atomarch user
+# We will downaload others fonts (in : write q for continue)                                     paru -S nerd-fonts-jetbrains-mono ttf-font-awesome ttf-font-awesome-4 ttf-material-design-icons
+# All right. We go to /home/atomarch/Desktop/atomarch/repos                                      cd /home/atomarch/Desktop/atomarch/repos
+# Clone repository dotfiles                                                                      git clone https://github.com/rxyhn/dotfiles.git
+# Change into dotfiles directory                                                                 cd dotfiles
+# Copy binary files                                                                              cp -r config/* ~/.config/
+#                                                                                                cp -r bin/* ~/.local/bin/
+#                                                                                                cp -r misc/. ~/
+# Reboot the system                                                                              sudo reboot now
+
+
+
+###########################################################################
+##                          ¡WE HAVE A PROBLEM!                          ##
+###########################################################################
+# Select atomarch user. Select configuration icon. Select 
+# awesome. Login like atomarch but the interface it had problem,
+# then press Ctrl-Alt-F5 and login like atomarch via console.
+# Go to /home/atomarch/Desktop/atomarch/repos/dotfiles                                           cd /home/atomarch/Desktop/atomarch/repos/dotfiles
+# ¡Here we go! We travel to past with git log. !Shhum!                                           git log
+# We can see that the fix ui and widgets is importante
+# for solve our problem. Then attention to the line: 
+# commit c1e2eef2baa91aebd37324891cb282666beae04f
+# We have seen this line. Verify with the command                                                git log | grep commit | grep "c1" | awk 'NR==6'
+# Perfect. We find the line, now travel to the past
+# with the command                                                                               git checkout $(git log | grep commit | grep "c1" | awk 'NR==6' | awk 'NF{print $NF}')
+# Show an history with the command                                                               history
+# Copy config/* into /home/atomarch/.config/                                                     cp -r config/* ~/.config/
+# Copy bin/* into /home/atomarch/.local/bin                                                      cp -r bin/* ~/.local/bin/
+# Copy misc/. into /home/atomarch                                                                cp -r misc/. ~/
+# Reboot the system                                                                              sudo reboot now
+# Login with interface graphic like atomarch.
+# ¡We did it again!
+
+
+
+###########################################################################
+##                          HERE COMES THE TUNING                        ##
+###########################################################################
+# Press Ctrl+Alt+F5 and login like atomarch
+# Change into directory /home/atomarch/.config/awesome                                          cd /home/atomarch/.config/awesome 
+# Edit rc.lua file                                                                              nano rc.lua
+# Change terminal alacritty by kitty
+# Press Ctrl-Alt-F2 to return to interface
+# Press Ctrl+Windows+r for reload
+# Then launch terminal kitty pressing Windows+Enter. It´s OK
+# Now install zsh                                                                              sudo pacman -S zsh
+# Press Ctrl+Alt+F2
+# Press Windows+Enter for new terminal
+# Verify the shell                                                                             echo $SHELL
+# Become root                                                                                  sudo su
+# Change a user default shell                                                                  usermod --shell /usr/bin/zsh atomarch
+# Exit and open a new terminal
+# Become root                                                                                  sudo su
+#                                                                                              localectl set-x11-keymap es
+# Return to the lock screen. Press Ctrl+Windows+q
+# Login with interface
+ERROR IN KEYBOARD. RETURN MOR LATER
+# Open firefox                                                                                 firefox
+# Go to settings+Privacy & Security+Never remember history.
+# Go to Add ons Manager. Selection Themes botton. Enable Dark theme.
 # 
+
+
+
+
+
+
+
+
 
 
 
