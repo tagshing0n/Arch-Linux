@@ -96,13 +96,27 @@
 ###########################################################################
 ##                        CONFIGURE THE REGIONS                          ##
 ###########################################################################
+# Open /etc/locale.gen and uncomment en_US.UTF-8 UTF-8 and es_MX.UTF-8 UTF-8                        nano /etc/locale.gen
+# Generate locale (region)                                                                          locale-gen
+# Configurete keyboard creating vconsole.conf file and write:                                       
+
+# KEYMAP=la-latin1                                                                                  nano /etc/vconsole.conf
 
 
 
+###########################################################################
+##                       INSTALL THE BOOTLOADER (GRUB)                   ##
+###########################################################################
+# Install grub                                                                                     grub-install /dev/sda
+# Create configurate file for grub                                                                 grub-mkconfig -o /boot/grub/grub.cfg                     
+# Check hostname (this is not created)                                                             cat /etc/hostname
+# Create file                                                                                      echo coffeBreak > /etc/hostname
+# Then do cat                                                                                      cat /etc/hostname
+# Modify hosts file writing:
 
-
-
-
+# 127.0.0.1 localhost
+# ::1       localhost                                                                                            
+# 127.0.0.1 coffreBreak.localhost coffeBreak                                                       nano /etc/hosts
 
 
 
