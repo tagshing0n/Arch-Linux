@@ -1,0 +1,114 @@
+                                                                                         #############################################################
+                                                                                         ##                        COMMAND                          ##
+                                                                                         #############################################################
+
+
+###########################################################################
+##                          DOWNLOAD AND INSTALL ISO                     ##
+###########################################################################
+# Download Arch-Linux.iso using https://archlinux.org/download/ link.
+
+# Create New Virtual Machine (in this case I use VMWare Player 16)
+# Configuration Virtual Machine
+# - Guest operative system Debian 5 64-bits
+# - Memory RAM 4 GB
+# - Processador 2 nucleos
+# - Network Bridge
+
+
+
+###########################################################################
+##                              INICIATING                               ##
+###########################################################################
+# Run Virtual Machine. Select first opction (BIOS)
+
+# Here we go. Firts check internet conection with the command                                       ping -c 1 www.google.com
+
+# Set the keyboard with the commmand                                                                loadkeys es
+
+
+
+
+###########################################################################
+##                              PARTITION TABLE                          ##
+###########################################################################
+# We establish partitions with the command                                                          cfdisk
+# Partition table. Select DOS.
+# Create three partition. Select NEW for each one (515M Primary, 15G Primary, 4.5G Primary).
+# Select TYPE for assignment type of partition. For 4.5 Primary select Linux swap / Solaris.
+# Then select WRITE and then select QUIT.
+# Check the correct write in table with the command                                                 lsblk
+
+# Format partition (vfat) for 512M Primary                                                          mkfs.vfat -F 32 /dev/sda1
+# Format partition (ext4) for 15G Primary                                                           mkfs.ext4 /dev/sda2
+# Format partition (swap) for 4.5 Primary (Linux swap / Solaris)                                    mkswap /dev/sda3
+# Enable swap area                                                                                  swapon
+
+
+
+
+###########################################################################
+##                           MOUNT THE SYSTEM                            ##
+###########################################################################
+# Mount /dev/sda2 on /mnt                                                                           mount /dev/sda2 /mnt
+# Make directory into /mnt named boot                                                               mkdir /mnt/boot
+# Mount /dev/sda1 on /mnt/boot                                                                      mount /dev/sda1 /mnt/boot
+
+
+
+
+
+
+###########################################################################
+##                INSTALL ADITIONAL PACKAGES                             ##
+###########################################################################
+# Install packages                                                                                  pacstrap /mnt linux linux-firmware networkmanager grub wpa_supplicant base base-devel 
+# Create fstab fil                                                                                  genfstab -U /mnt
+# Send to /mnt/etc/fstab                                                                            genfstab -U /mnt/etc/fstab
+# Check with cat                                                                                    cat /mnt/etc/fstab
+
+
+
+
+
+###########################################################################
+##                        WE ENTER OUR SYSTEM                            ##
+###########################################################################
+
+# We enter our system                                                                               arch-chroot /mnt
+# Create a password for user root                                                                   passwd
+# Create a new user                                                                                 useradd -m atomarch
+# Create a password for atomarch                                                                    passwd atomarch
+
+# For the system to ask us for the password went we want to be root:
+# - We assign our user to the WHEEL group                                                           usermod -aG wheel atomarch
+# - Install sudo packages                                                                           pacman -S sudo
+# - Install vim and nano                                                                            pacman -S vim nano
+# - Open /etc/sudoers and uncomment %wheel ALL=(ALL:ALL) ALL                                        nano /etc/sudoers
+# - It´s all. We probe the changes. We change to atomarch user                                      su atomarch
+# - Show identifications number                                                                     id
+# - We ask for root                                                                                 sudo su
+# - Well done, ask for password!!
+
+                                                                                                     
+
+
+###########################################################################
+##                        CONFIGURE THE REGIONS                          ##
+###########################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
