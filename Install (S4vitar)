@@ -103,6 +103,7 @@
 ###########################################################################
 ##                       INSTALL THE BOOTLOADER (GRUB)                   ##
 ###########################################################################
+# We will install the bootloader.
 # Install grub                                                                                     grub-install /dev/sda
 # Create configurate file for grub                                                                 grub-mkconfig -o /boot/grub/grub.cfg                     
 # Check hostname (this is not created)                                                             cat /etc/hostname
@@ -119,6 +120,7 @@
 ###########################################################################
 ##                    IS TIME TO "I USE ARCH BY THE WAY"                 ##
 ###########################################################################
+# For fun.
 # Install neofetch                                                                                 pacman -S neofetch
 
 
@@ -126,6 +128,7 @@
 ###########################################################################
 ##                          NWTWORK CONECTION                            ##
 ###########################################################################
+# We will conect internet.
 # We become root                                                                                  sudo su
 # Start service for internet conection                                                            systemctl start NetworkManager.service
 # Enable NetworkManager                                                                           systemctl enable NetworkManager
@@ -139,6 +142,7 @@
 ###########################################################################
 ##                            AUR REPOSITORY                             ##
 ###########################################################################
+# We vill add aur repository for more packages. 
 # Install git                                                                                     pacman -S git
 # We become atomarch user                                                                           
 # Create directorie /repos and then into it                                                       mkdir -p Desktop/atomarch/repos
@@ -153,6 +157,7 @@
 ###########################################################################
 ##                      BLACKARCH REPOSITORY (OPTIONAL)                  ##
 ###########################################################################
+# We will add blackarch repository for pentesting packages.
 # Make blackarch directory into  /home/atomarch/Desktop/atomarch/repos and
 # then into it blackarch                                                                          mkdir blackarch
                                                                                                   cd blackarch
@@ -168,6 +173,7 @@
 ###########################################################################
 ##                          GRAPHIC INTERFACE                            ##
 ########################################################################### 
+# We will install graphic interface.
 # Install packages xorg, xorg-server (enter for default install)                                  pacman -S xorg xorg-server
 # Install package gnome                                                                           pacman -S gnome 
 # Start gdm.service for begin the graphic interface then log in atomarch                          systemctl start gdm.service
@@ -184,6 +190,7 @@
 ###########################################################################
 ##                          INSTALL VMWARE-TOOLS                         ##
 ###########################################################################
+# We will load the system with the correct proportions.
 # One once in home screen press Ctrl-Alt-F5 and login as atomarch
 # Become root                                                                                     sudo su
 # Install package gtkmm                                                                           pacman -S gtkmm
@@ -192,10 +199,52 @@
 # Enable demon systemctl vmtoolsd                                                                 systemctl enable vmtoolsd
 # Next step, pray an our father!
 # Reboot system                                                                                   reboot now
-# 
+# Login with the interface 
+# Run kitty terminal. The keyboard does not word correct.                            
+# Then go to Keyboard into Activities botton. Add Spanish (Latin American) 
+# option into Input Sources menu. Finally remove English keyboard. It´s all.
 
 
 
+###########################################################################
+##                          INSTALL AWESOME WM                           ##
+###########################################################################
+# We will install Awesome WM with PICOM and other requirements
+# Run kitty terminal                                                     
+# Become root                                                                                    sudo su
+# Install firefox (enter for default)                                                            pacman -S firefox
+# Open firefox window
+# Go to github.com/rxyhn/dotfiles
+# Pick to SETUP botton. Copy and paste                                                           paru -S awesome-git picom-git alacritty rofi todo-bin acpi acpid acpi_call \
+#                                                                                                wireless_tools jq inotify-tools polkit-gnome xdotool xclip maim \
+#                                                                                                brightnessctl alsa-utils alsa-tools pulseaudio lm_sensors gpick \
+#                                                                                                mpd mpc mpdris2 ncmpcpp playerctl redshift ffmpeg bluez-utils --needed 
+# Enter for default instalation (in : part write q for continue with the
+# instalation)
+# Copy an paste:                                                                                 # For automatically launching mpd on login
+#                                                                                                systemctl --user enable mpd.service
+#                                                                                                systemctl --user start mpd.service
+#
+#                                                                                                # For charger plug/unplug events (if you have a battery)
+#                                                                                                sudo systemctl enable acpid.service
+#                                                                                                sudo systemctl start acpid.service
+
+# We will install fonts. We install wget                                                         sudo pacman -S wget
+# Change to directory /usr/share/fonts                                                           cd /usr/share/fonts
+# Become root                                                                                    sudo su
+# Download with wget                                                                             wget http://fontlot.com/downfile/5baeb08d06494fc84dbe36210f6f0ad5.105610
+# We list                                                                                        ls -l
+# Check type of file                                                                             file 5baeb08d06494fc84dbe36210f6f0ad5.105610
+# Install p7zip package                                                                          pacman -S p7zip
+# Show 5baeb08d06494fc84dbe36210f6f0ad5.105610 files                                             7z l 5baeb08d06494fc84dbe36210f6f0ad5.105610
+# Rename 5baeb08d06494fc84dbe36210f6f0ad5.105610 like comprimido.zip                             mv 5baeb08d06494fc84dbe36210f6f0ad5.105610 comprimido.zip
+# We decompress comprimido.zip file                                                              unzip comprimido.zip
+# Remove comprimido.zip                                                                          rm comprimido.zip
+# Find archives with termination .ttf using grep                                                 find . | grep "\.ttf$"
+# While find this files sent to /usr/share/fonts                                                 find . | grep "\.ttf$" | while read line; do cp $line .; done
+# Listing                                                                                        ls
+# Remove iosevka-2.2.1 and iosevka-slap-2.1.1                                                    rm -r iosevka-2.2.1/
+#                                                                                                rm -r iosevka-slap-2.1.1/
 
 
 
