@@ -1,6 +1,6 @@
-                                                                                         #############################################################
-                                                                                         ##                        COMMAND                          ##
-                                                                                         #############################################################
+                                                                                                     #############################################################
+                                                                                                     ##                        COMMAND                          ##
+                                                                                                     #############################################################
 
 
 ###########################################################################
@@ -122,26 +122,26 @@
 ###########################################################################
 ##                          NWTWORK CONECTION                            ##
 ###########################################################################
-# We become root                                                                                 sudo su
-# Start service for internet conection                                                           systemctl start NetworkManager.service
-# Enable NetworkManager                                                                          systemctl enable NetworkManager
+# We become root                                                                                  sudo su
+# Start service for internet conection                                                            systemctl start NetworkManager.service
+# Enable NetworkManager                                                                           systemctl enable NetworkManager
 # Do ping to google                                                                              
-# Well done! That´s it!                                                                          ping -c 1 google.com
-# Start wpa_applicant.service                                                                    systemctl start wpa_supplicant.service
-# Enable wpa_supplicant                                                                          systemctl enable wpa_supplicant.service
+# Well done! That´s it!                                                                           ping -c 1 google.com
+# Start wpa_applicant.service                                                                     systemctl start wpa_supplicant.service
+# Enable wpa_supplicant                                                                           systemctl enable wpa_supplicant.service
 
 
 
 ###########################################################################
 ##                            AUR REPOSITORY                             ##
 ###########################################################################
-# Install git                                                                                   pacman -S git
+# Install git                                                                                     pacman -S git
 # We become atomarch user                                                                           
-# Create directorie /repos and then into it                                                     mkdir -p Desktop/atomarch/repos
-                                                                                                cd Desktop/atomarch/repos
-# Download repository                                                                           git clone https://aur.archlinux.org/paru-bin.git
-# Go into paru-bin                                                                              cd paru-bin
-# Use makepkg                                                                                   makepkg -si
+# Create directorie /repos and then into it                                                       mkdir -p Desktop/atomarch/repos
+                                                                                                  cd Desktop/atomarch/repos
+# Download repository                                                                             git clone https://aur.archlinux.org/paru-bin.git
+# Go into paru-bin                                                                                cd paru-bin
+# Use makepkg                                                                                     makepkg -si
 # Well done. ARU repository it´s done.
 
 
@@ -149,7 +149,23 @@
 ###########################################################################
 ##                      BLACKARCH REPOSITORY (OPTIONAL)                  ##
 ###########################################################################
+# Make blackarch directory into  /home/atomarch/Desktop/atomarch/repos and
+# then into it blackarch                                                                          mkdir blackarch
+                                                                                                  cd blackarch
+# Donwload strap.sh                                                                               curl -O https://blackarch.org/strap.sh   
+# User permits for execute                                                                        chmod +x strap.sh
+# Become root                                                                                     sudo su
+# Execute strap.sh                                                                                ./strap.sh
+# Update                                                                                          pacman -Sy
+# Well done. The system is update and contain blackarch repository!
 
+
+
+###########################################################################
+##                          GRAPHIC INTERFACE                            ##
+########################################################################### 
+# Install packages xorg, xorg-server (enter for default install)                                  pacman -S xorg xorg-server
+#  
 
 
 
