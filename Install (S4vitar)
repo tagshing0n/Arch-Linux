@@ -229,10 +229,10 @@
 #                                                                                                sudo systemctl enable acpid.service
 #                                                                                                sudo systemctl start acpid.service
 
-# We will install fonts. We install wget                                                         sudo pacman -S wget
+# We will install FONTS. We install wget                                                         sudo pacman -S wget
 # Change to directory /usr/share/fonts                                                           cd /usr/share/fonts
 # Become root                                                                                    sudo su
-# Download with wget                                                                             wget http://fontlot.com/downfile/5baeb08d06494fc84dbe36210f6f0ad5.105610
+# Download with wget Iosevka font                                                                wget http://fontlot.com/downfile/5baeb08d06494fc84dbe36210f6f0ad5.105610
 # We list                                                                                        ls -l
 # Check type of file                                                                             file 5baeb08d06494fc84dbe36210f6f0ad5.105610
 # Install p7zip package                                                                          pacman -S p7zip
@@ -245,7 +245,15 @@
 # Listing                                                                                        ls
 # Remove iosevka-2.2.1 and iosevka-slap-2.1.1                                                    rm -r iosevka-2.2.1/
 #                                                                                                rm -r iosevka-slap-2.1.1/
-
+# We will download Icomoon font. We go to 
+# https://dropbox.com/s/hrkub2yo9iapljz/icomoon.zip?dl=0 link
+# and download icomoon.zip.
+# Return to kitty and move /home/atomarch/Downloads/icomoon.zip 
+# into /usr/share/fonts                                                                          mv /home/atomarch/Downloads/icomoon.zip .    
+# Decompress icomoon.zip                                                                         unzip icomoon.zip
+# Move .ttf files into /usr/share/fonts                                                          mv icomoon/*.ttf .
+# Remove icomoon directory                                                                       rm -rf icomoon
+# 
 
 
 
