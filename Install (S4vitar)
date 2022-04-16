@@ -314,7 +314,11 @@ ERROR IN KEYBOARD. RETURN MOR LATER
 # Open firefox                                                                                 firefox
 # Go to settings+Privacy & Security+Never remember history.
 # Go to Add ons Manager. Selection Themes botton. Enable Dark theme.
-# 
+
+
+# Go to https://s4vitar.github.io/bspwm-configuration-files/ link.
+# Go to zshrc section and copy the configuration.
+
 
 
 
