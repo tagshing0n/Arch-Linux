@@ -411,7 +411,11 @@ map f2 paste_from_buffer a
 
 shell zsh
 
-
+# In this point the terminal configuration was as follows:
+# Windows+enter (open a new terminal)
+# Windows+q (close a terminal)
+# ctrl+shift+enter (open a new terminal inside one)
+# 
 
 
 
