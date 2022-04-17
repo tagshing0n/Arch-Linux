@@ -406,10 +406,10 @@ map ctrl+right neighboring_window right
 map ctrl+up neighboring_window up
 map ctrl+down neighboring_window down
 
-map f1 copy_to_buffer a
-map f2 paste_from_buffer a
-map f3 copy_to_buffer b
-map f4 paste_from_buffer b
+map shift+f1 copy_to_buffer a
+map shift+f2 paste_from_buffer a
+map shift+f3 copy_to_buffer b
+map shift+f4 paste_from_buffer b
 
 shell zsh
 
@@ -425,8 +425,10 @@ shell zsh
 # ctrl+shift+c (copy text)
 # ctrl+shift+v (paste text)
 # ctrl+shift+l (organize the terminal)
-# f1 (copy text)
-# f2 (paste text)
+# shift+f1 (copy text)
+# shift+f2 (paste text)
+# shift+f3 (copy text)
+# shift+f4 (paste text)
 
 
 
