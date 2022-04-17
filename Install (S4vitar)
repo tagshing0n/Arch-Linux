@@ -483,7 +483,31 @@ refresh-rate = 0;
 -- require("ui.decorations.titlebar")
 -- require("ui.decorations.music")
 
-# 
+# Change to /home/atomarch/.config/awesome/theme directory                                    cd ~/.config/awesome/theme
+# Remove picom.conf file                                                                      rm picom.conf
+# Download picom.conf                                                                        wget https://raw.githubusercontent.com/rxyhn/bspdots/main/config/picom/picom.conf
+# Open picom.conf and write in general section:
+
+vsync = false
+
+# Write in opacity section:
+
+opacity = 1.0
+
+# Write in general section:
+
+use-damage = false
+
+# Write in corners section:
+
+round-borders = 20;
+
+# Comment (#) in the general section the next line:
+
+refresh-rate = 0
+
+#
+
 
 
 
