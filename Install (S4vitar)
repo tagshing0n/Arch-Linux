@@ -473,10 +473,17 @@ refresh-rate = 0;
 
 # We will se the erros                                                                       picom --config picom.conf
 # We will comment (#) the Blurring section inside picom.conf file
-# We will se the erros                                                                       picom --config picom.conf
-#
+# Ctrl+Windows+q
 
+# We continue retouching.
+# Change to /home/atomarch/.config/awesome/ui/decorations directory                           cd ~/.config/awesome/ui/decorations
+# Open init.lua file                                                                          nano init.lua 
+# We comment the next to lines: (in lua comments are made with --)
 
+-- require("ui.decorations.titlebar")
+-- require("ui.decorations.music")
+
+# 
 
 
 
