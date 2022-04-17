@@ -415,6 +415,10 @@ shell zsh
 # Windows+enter (open a new terminal)
 # Windows+q (close a terminal)
 # ctrl+shift+enter (open a new terminal inside one)
+# ctrl+left (go to left terminal)
+# ctrl+right (go to right terminal)
+# ctrl+up (go to up terminal)
+# ctrl+down (go to down terminal)
 # 
 
 
