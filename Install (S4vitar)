@@ -317,7 +317,95 @@ ERROR IN KEYBOARD. RETURN MOR LATER
 
 
 # Go to https://s4vitar.github.io/bspwm-configuration-files/ link.
-# Go to zshrc section and copy the configuration.
+# Go to zshrc section and copy the configuration. (The file is named 
+# File zsgrc in the repository).
+# Open ~/.zshrc in the terminal with vim                                                       vim ~/.zshrc
+# Delete all text and paste the configuration of zshrc. Save the 
+# changes. Exit and open a new terminal.
+# Download zsh-syntax-highlighting, zsh-autosuggestions                                       paru -S zsh-syntax-highlighting zsh-autosuggestions
+# Download locate                                                                             sudo pacman -S locate
+# Updatate                                                                                    sudo updatedb
+# Open a new terminal y copy the line: 
+# zsh-syntax-highlighting.zsh
+# We do locate                                                                               locate zsh-syntax-highlighting.zsh
+# Copy the line:
+# zsh-autosuggestions.zsh
+# We do locate                                                                               locate zsh-autosuggestions.zsh
+# Open ~/.zshrc file with nano and go to plugins section          
+# Complete the two first line like the next:
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh                     
+# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh                  nano ~/.zshrc
+# Open a new terminal.
+# Well done! Two messages disappeared. We continue.
+# Go to: 
+# https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/sudo/sudo.plugin.zsh 
+# Change into /usr/share                                                                     cd /usr/share
+# Become root                                                                                sudo su
+# We make a directory name zsh-sudo                                                          mkdir zsh-sudo
+# We change user permits                                                                     chown atomarch:atomarch zsh-sudo/ 
+# Change into /usr/share/zsh-sudo                                                            cd /usr/share/zsh-sudo
+# Become atomarch (make exit)
+# Change into /usr/share/zsh-sudo                                                            cd /usr/share/zsh-sudo
+# Download file of:
+# https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/sudo/sudo.plugin.zsh                wget https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/sudo/sudo.plugin.zsh
+# Exit and open a new terminal Windows + q. Windows + enter.
+# Well done. Again we remove one more line of errors.
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
