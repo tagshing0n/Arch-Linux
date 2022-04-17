@@ -578,6 +578,25 @@ Enable transient prompt
 Instant prompt mode
 (1) Verbose
 
+# Open .p10k.zsh file                                                                       nano .p10k.zsh
+# Add the next:
+
+
+# The list of segments shown on the left. Fill it with the most important segments.
+  typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+    os_icon                 # os identifier
+    dir                     # current directory
+    vcs                     # git status
+ ########## ADD THIS LINE   command_execution_time 
+ ########## ADD THIS LINE   context
+    # prompt_char           # prompt symbol
+  )
+
+# Comment the next lines:
+
+
+
+
 
 
 
