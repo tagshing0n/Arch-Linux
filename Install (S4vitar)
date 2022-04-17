@@ -411,6 +411,18 @@ map shift+f2 paste_from_buffer a
 map shift+f3 copy_to_buffer b
 map shift+f4 paste_from_buffer b
 
+cursor_shape beam
+cursor_beam_thickness 1.8
+
+mouse_hide_wait 3.0
+detect_urls yes
+
+repaint_delay 10
+input_delay 3
+sync_to_monitor yes
+
+map ctrl+shift+z toggle_layout stack
+
 shell zsh
 
 # In this point the terminal configuration was as follows:
@@ -429,6 +441,7 @@ shell zsh
 # shift+f2 (paste text)
 # shift+f3 (copy text)
 # shift+f4 (paste text)
+
 
 
 
