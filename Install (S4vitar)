@@ -507,7 +507,9 @@ backend = "xrender";
 
 # Well done. Now change the image background.   
 # We make Images directory into Desktop                                                     mkdir ~/Desktop/Images
-# Dowonload an image. We can see the images with the following command                      kitty +kitten icat name_of_image.jpeg
+# Download an image. We can see the images with the following command                       kitty +kitten icat name_of_image.jpg
+# Download feh packages                                                                     sudo pacman -S feh                            
+# Configure the background                                                                   feh --bg-fill name_of_image.jpg
 
                       
                                                     
