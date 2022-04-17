@@ -495,12 +495,24 @@ refresh-rate = 0
 
 corner-radius = 20;
 
+# Write in the general section the next line:
+
+backend = "xrender";
+
 # Refresh the terminal ctrl+Windows+r
 
 # Verify picom                                                                              picom --config picom.conf
 
 # Kill process picom                                                                        pkill picom
-#
+
+# Well done. Now change the image background.   
+# We make Images directory into Desktop                                                     mkdir ~/Desktop/Images
+# Dowonload an image. We can see the images with the following command                      kitty +kitten icat name_of_image.jpeg
+
+                      
+                                                    
+
+
 
 
 
