@@ -459,6 +459,23 @@ shell zsh
 # ctrl+shift+right (change right tap)
 # ctrl+shift+z (zoom terminal)
 
+# Change to /home/atomarch/.config/awesome/theme directory                                    cd ~/.config/awesome/theme
+# Open picom.conf file                                                                        nano picom.conf
+# Go to general settings and write:
+
+vsync = false;
+use-damage = false;
+
+# We will se the erros                                                                       picom --config picom.conf
+# Remove the next line of picom.conf inside of general settings:
+
+refresh-rate = 0;
+
+# We will se the erros                                                                       picom --config picom.conf
+# We will comment (#) the Blurring section inside picom.conf file
+# We will se the erros                                                                       picom --config picom.conf
+#
+
 
 
 
