@@ -310,12 +310,12 @@
 #                                                                                              localectl set-x11-keymap es
 # Return to the lock screen. Press Ctrl+Windows+q
 # Login with interface
+
 ERROR IN KEYBOARD. RETURN MOR LATER
+
 # Open firefox                                                                                 firefox
 # Go to settings+Privacy & Security+Never remember history.
 # Go to Add ons Manager. Selection Themes botton. Enable Dark theme.
-
-
 # Go to https://s4vitar.github.io/bspwm-configuration-files/ link.
 # Go to zshrc section and copy the configuration. (The file is named 
 # File zsgrc in the repository).
@@ -350,7 +350,67 @@ ERROR IN KEYBOARD. RETURN MOR LATER
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/sudo/sudo.plugin.zsh                wget https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/sudo/sudo.plugin.zsh
 # Exit and open a new terminal Windows + q. Windows + enter.
 # Well done. Again we remove one more line of errors.
-# 
+
+# It's time for steroids! We have little problem with ls and cat.
+# We eill fix it. We will install lsd and bat                                                sudo pacman -S lsd bat
+# But the zsh sell of atomarch it's different to root. We will make a symbolic
+# link to root. For this we will install scrub packaged                                     paru -S scrub
+# Go to https://www.nerdfonts.com/font-downloads link and download
+# Hack Nerd Font. 
+# Become root                                                                               sudo su
+# Change to /usr/share/fonts diretory                                                       cd /usr/share/fonts
+# We will move /home/atomarch/Downloads/Hack.zip to /usr/share/fonts                        mv /home/atomarch/Downloads/Hack.zip .
+# Decompress Hack.zip                                                                       unzip Hack.zip
+# Remove Hack.zip                                                                           rm Hack.zip
+# Exit and open a new terminal.
+# It's time to fondle the kitty terminal.
+# Change home/atomarch/.config/kitty directory                                               cd home/atomarch/.config/kitty
+# We will download color.ini file                                                            wget https://raw.githubusercontent.com/rxyhn/bspdots/main/config/kitty/color.ini
+# Go to https://github.com/rxyhn/bspdots/blob/main/config/kitty/kitty.conf
+# and copy kitti.conf. 
+# We will open home/atomarch/.config/kitty/kitty.conf (the file not exist)                    nano ~/.config/kitty/kitty.conf
+# and write: (the text above)                                                                                
+
+enable_audio_bell no
+
+include color.ini
+
+font_family      Cartograph CF Italic
+font_size 11
+
+disable_ligatures never
+
+url_color #fff
+
+url_style curly
+
+shell zsh
+
+# Again open kitty.conf and modify above something like that:
+
+enable_audio_bell no
+
+include color.ini
+
+font_family      HackNerdFont
+font_size 13
+
+disable_ligatures never
+
+url_color #61afef
+
+url_style curly
+
+map ctrl+left neighboring_window left
+map ctrl+right neighboring_window right
+map ctrl+up neighboring_window up
+map ctrl+down neighboring_window down
+
+map f1 copy_to_buffer a
+map f2 paste_from_buffer a
+
+shell zsh
+
 
 
 
