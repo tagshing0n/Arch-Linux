@@ -592,9 +592,17 @@ Instant prompt mode
     # prompt_char           # prompt symbol
   )
 
-# Comment the next lines:
+# Comment the lines inside:
 
+typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 
+# Insure that in the .zshrc file the next line is correct:
+
+source /home/atomarch/powerlevel10k/powerlevel10k.zsh-theme
+
+# Well done. The ultimate error is fixed.
+
+  
 
 
 
