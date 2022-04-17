@@ -521,6 +521,86 @@ local wallpaper_cmd="feh --bg-fill /home/atomarch/Desktop
 os.execute(wallpaper_cmd)
 
 # Refresh the system
+# ¡Well done!
+
+# Let's go for the last error message.
+# Go to https://github.com/romkatv/powerlevel10k link and copy
+# in the manual section the next lines:
+
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+
+# Paste into terminal.
+# Type the next command                                                                    zsh
+# Type the next options:
+
+- yes
+- yes
+- yes
+- yes
+- 2
+Prompt style
+- (2) classic
+
+Character set
+- (1) Unicode
+
+Prompt color
+- (3) Dark
+
+Show current time
+- (1) No
+
+Prompt separator
+- (1) Angled
+
+Prompt heads
+- (1) Sharp
+
+Prompt tails
+- (4) Slanted
+
+Prompt height
+- (1) One line
+
+Prompt spacing
+- (2) Sparse
+
+Icons
+- (2) Many icons
+
+Prompt flow
+- (2) fluent
+
+Enable transient prompt
+- (y) yes
+
+Instant prompt mode
+(1) Verbose
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                       
                                                     
 
